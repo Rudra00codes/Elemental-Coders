@@ -9,7 +9,7 @@
 
 
 ## 🏆 Hackathon Submission
-
+    
 #### This project was developed for the Techtronics 2025, Dnyanprassarak Mandal's College and Research Centre, Goa.
 
 
@@ -20,45 +20,42 @@
 <div style="display: flex; align-items: center; gap: 20px;">
   <div>
 
-#### JPD Hub needs a Talent Module that connects talented individuals with clients while maintaining admin control. The platform should:
+#### Tech-Driven Solutions to Address the Dual Threat of Paper Cups – Environmental Problems and Health Risks:
 
-- Enable talent registration and profile management
-- Provide client access to talent pool
-- Include admin controls for profile verification
-- Facilitate hiring process management
+- Raises Awareness
+- Encourages Sustainable Behaviour
+- Tracks Impact
+- Facilitates Collaboration
   </div>
-  
-  <img src="/talent-platform/talent-platform-frontend/public/JPD_Card.png" alt="JPD Hub Card" width="300px" style="border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
 </div>
 
 
 ## 💡 Our Solution
-### Our solution is a comprehensive talent management platform that streamlines the process of connecting talented individuals with potential clients, while ensuring quality through admin verification.
+### Our solution is a Web platform that increases Awareness and encourages Sustainability while recommending environmentally friendlier options.
 
 <div align="center">
   <img src="public/solution-overview.png" alt="Solution Overview" width="80%">
 </div>
 
 ### Key Features Implemented
-1. **Talent Registration & Admin Approval** ✅
-   - Secure registration form with validation
-   - Profile photo upload with preview
-   - Admin review system
-   - Email/WhatsApp notifications
+1. **Waste Tracking** ✅
+   - Tracks waste produced by a campus
+   - Tracks the amount of wate produced per student
+   - Campus leaderboard System
 
-2. **Talent Profile Display** ✅
+2. **Web applications** ✅
    - Clean, responsive UI
    - Advanced search and filters
-   - Skill-based categorization
+   - Accessible by anyone
 
-3. **Client Interaction** ✅
+3. **Replacment Marketplace** ✅
    - Seamless browsing experience
-   - Secure hire request system
-   - Real-time notifications
+   - Companies can provide enviornmentally friendlier options
+   - Usefull for both Campuses and Students
 
-4. **Admin Dashboard** ✅
-   - Profile verification system
-   - Request management
+4. **Community Dashboard** ✅
+   - can detail situtaions and hurdles faced for overcoming the problems
+   - a good way to help an up and coming solution
    - Analytics and reporting
 
 <!-- ## 🖥️ Demo & Screenshots
@@ -99,224 +96,6 @@ graph TD
 ```
 
 <br>
-
-## 📝 UI Wireframes (Rough Layout)
-
-<details>
-  <summary>Click to expand!</summary>
-
-> **Note**: These are ASCII art representations of our planned UI layout, not the final design. They serve as a basic visualization of component structure and user flow.
-
-### 🏠 Home Page Layout
-
-```bash
-+-------------Home Page / Landing-----------------+
-|                                                |
-|     🎯 Connect with Top Tech Talent            |
-|     Find the perfect talent for your project   |
-|                                                |
-|     [Browse Talents]  [Register as Talent]     |
-|                                                |
-|  +----------------Features------------------+  |
-|  |                                          |  |
-|  |  🔍 Easy Search    🔒 Verified Profiles |  |
-|  |  📝 Quick Apply    ⭐ Top Talent        |  |
-|  |                                          |  |
-|  +-----------------------------------------+   |
-+------------------------------------------------+
-
-```
-
-### 📋 Registration Form Layout
-
-```bash
-+------------------------------------------+
-|           Talent Platform                 |
-|  [Logo]     Browse  Register   Admin     |
-+------------------------------------------+
-
-+------------------Registration Form----------------+
-|                                                  |
-|                 [Photo Upload]                   |
-|                     ⭕️                          |
-|                                                  |
-|  Full Name: +-------------------------+          |
-|             |                         |          |
-|             +-------------------------+          |
-|                                                  |
-|  Email:    +-------------------------+          |
-|             |                         |          |
-|             +-------------------------+          |
-|                                                  |
-|  Skills:    +-------------+ [Add Skill]         |
-|             |             |                      |
-|             +-------------+                      |
-|                                                  |
-|  [JavaScript] [React] [Node.js] [MongoDB]       |
-|     (clickable tags with 'x' to remove)         |
-|                                                  |
-|  Bio:       +-------------------------+          |
-|             |                         |          |
-|             |                         |          |
-|             +-------------------------+          |
-|                                                  |
-|          [    Submit Registration    ]           |
-|                                                  |
-+--------------------------------------------------+
-```
-
-### 🔍 Talent Directory Layout
-
-```bash
-+-------------------Talent Directory----------------+
-|  Search: +----------------+ [Search]             |
-|                                                  |
-|  +----------------+ +------------------+         |
-|  | Talent Card 1  | | Talent Card 2    |         |
-|  | [Photo]        | | [Photo]          |         |
-|  | Name           | | Name             |         |
-|  | Skills         | | Skills           |         |
-|  | Bio            | | Bio              |         |
-|  +----------------+ +------------------+         |
-|                                                  |
-|  +----------------+ +------------------+         |
-|  | Talent Card 3  | | Talent Card 4    |         |
-|  | [Photo]        | | [Photo]          |         |
-|  | Name           | | Name             |         |
-|  | Skills         | | Skills           |         |
-|  | Bio            | | Bio              |         |
-|  +----------------+ +------------------+         |
-+--------------------------------------------------+
-```
-
-### 👤 Profile Page Layout
-
-```bash
-+--------------Talent Profile Page----------------+
-|                                                |
-|    [Profile Photo]     Status: ✅ Verified     |
-|    John Doe                                    |
-|    Full-Stack Developer                        |
-|                                                |
-|    Skills:                                     |
-|    [React] [Node.js] [MongoDB] [TypeScript]    |
-|                                                |
-|    About Me:                                   |
-|    +--------------------------------------+    |
-|    | Professional developer with 5 years...|   |
-|    +--------------------------------------+    |
-|                                                |
-|    Projects:                                   |
-|    - E-commerce Platform                       |
-|    - Social Media App                          |
-|                                                |
-|    [Contact] [Download CV] [Hire Me]           |
-+------------------------------------------------+
-
-```
-
-
-### 📊 Admin Dashboard Layout
-
-```bash
-+-------------------Admin Dashboard----------------+
-|                                                  |
-|  Pending Approvals (3)                          |
-|  +----------------------------------------+     |
-|  | [Photo] Name: John Doe                 |     |
-|  | Skills: React, Node.js                 |     |
-|  | [Approve] [Reject]                     |     |
-|  +----------------------------------------+     |
-|                                                 |
-|  +----------------------------------------+     |
-|  | [Photo] Name: Jane Smith               |     |
-|  | Skills: Python, AWS                    |     |
-|  | [Approve] [Reject]                     |     |
-|  +----------------------------------------+     |
-+--------------------------------------------------+
-
-```
-```bash
-+---------------Search Results--------------------+
-|  Filters:                                      |
-|  Skills: [×React] [×Node.js]                   |
-|  Experience: [0-2] [2-5] [5+] years            |
-|  Location: [Remote] [On-site]                  |
-|                                                |
-|  Found 15 matches                              |
-|  +----------------+ +------------------+       |
-|  | [Photo]        | | [Photo]          |       |
-|  | Sarah Chen     | | Mike Johnson     |       |
-|  | React Expert   | | Full-Stack Dev   |       |
-|  | ⭐⭐⭐⭐⭐    | | ⭐⭐⭐⭐        |       | 
-|  +----------------+ +------------------+       |
-+------------------------------------------------+
-```
-
-```bash
-+--------------Admin Analytics--------------------+
-|                                                |
-|  📊 Dashboard Overview                         |
-|  +-------------------+ +-------------------+   |
-|  | New Registrations | | Pending Approvals |   |
-|  |        24         | |         7         |   |
-|  +-------------------+ +-------------------+   |
-|                                                |
-|  🔍 Recent Activity                            |
-|  | Time     | Action    | User              |  |
-|  | 10:45 AM | Approved  | John Doe          |  |
-|  | 10:30 AM | Rejected  | Invalid Profile   |  |
-|  | 10:15 AM | New Reg.  | Sarah Chen        |  |
-|                                                |
-|  📈 Weekly Stats                               |
-|  +--------------------------------------+      |
-|  |    ▁▃▅▇█▇▅  Registrations           |       |
-|  |    ▂▄▆▇▆▄▂  Approvals              |        |
-|  +--------------------------------------+      |
-+------------------------------------------------+
-
-```
-
-```bash
-+-------------Notification Panel------------------+
-|  🔔 Notifications                              |
-|                                                |
-|  [Today]                                       |
-|  • Profile approved by admin                   |
-|  • New message from client                     |
-|                                                |
-|  [Yesterday]                                   |
-|  • Profile view by Company XYZ                 |
-|  • Skills endorsed by peer                     |
-|                                                |
-|  [Settings ⚙️]                                 |
-|  □ Email notifications                         |
-|  □ Push notifications                          |
-+------------------------------------------------+
-
-```
-
-```bash
-+-------------Message Center---------------------+
-|  📨 Messages                                  |
-|  +------------------------------------------+ |
-|  | Search messages...        [Filter ▼]     | |
-|  +------------------------------------------+ |
-|                                               |
-|  [Active Chats]                               |
-|  +------------------------------------------+ |
-|  | 🟢 Tech Corp                             | |
-|  | Latest: When can you start...            | |
-|  +------------------------------------------+ |
-|  | 🔴 StartUp Inc                           | |
-|  | Latest: Thanks for your time...          | |
-|  +------------------------------------------+ |
-+----------------------------------------------+
-
-```
-</details>
-
-> These wireframes demonstrate the basic structure and component relationships in our application. The actual implementation uses modern UI components with Tailwind CSS styling.
 
 
 ### 🔄 Component Relationships
@@ -510,14 +289,8 @@ npm install @types/express @types/cors @types/multer @types/nodemailer -D
 - **Secure File Upload**: Support for profile photo upload with preview
 - **Admin Controls**: Comprehensive dashboard for profile management
 
-## 🔒 Security Features
-- Input validation and sanitization
-- Secure file upload handling
-- Protected admin routes
-- Rate limiting for API endpoints
-
 ## 🎯 Future Scope
-- [ ] AI-powered talent matching
+- [ ] AI-powered solutions
 - [ ] Video interview integration
 - [ ] Blockchain-based skill verification
 - [ ] Mobile application
@@ -526,14 +299,11 @@ npm install @types/express @types/cors @types/multer @types/nodemailer -D
 <hr>
 
 ## Team Details
-| Name | Role | GitHub |
+|Sr no.| Name | GitHub |
 |------|------|--------|
-| Yugandhar Bhardwaj | Project Lead | [@github](https://github.com) |
-| Rudra Pratap Singh | Frontend-Backend Integrator | [@Rudra00codes](https://github.com/Rudra00codes) |
-| Anant Srivastava | Backend and Feature Developer | [@RoboShep](https://github.com)
-| Prince Sharma |  Researcher  | [@github](https://github.com) |
-| Aditya Punj | UI/UX Designer | [@github](https://github.com) |
-
+|1.| Rudra Pratap Singh | [@Rudra00codes](https://github.com/Rudra00codes) |
+|2.| Anant Srivastava | [@RoboShep](https://github.com/Robo-Shep)|
+|3.| Tushar |[@codingnoobno1](https://github.com/codingnoobno1)|
 <br>
 
 # Create a zip file
