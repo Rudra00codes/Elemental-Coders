@@ -1,16 +1,16 @@
-# 🎯 Awareness Grabbing Platform - Techtronics Hackathon 2025
+# 🎯 Awareness Grabbing Platform - Technotronics Hackathon 2025
 
 <div align="center">
   <img src="/talent-platform/talent-platform-frontend/public/talentModule-baner.png" alt="Talent Platform Banner" width="100%">
   
-  [![Made for Techtronics](https://img.shields.io/badge/Made%20for-Techtronics-blue)](https://unstop.com/o/a4ckfLJ?lb=atOHATDg&utm_medium=Share&utm_source=shortUrl)
+  [![Made for Technotronics](https://img.shields.io/badge/Made%20for-Technotronics-blue)](https://unstop.com/o/a4ckfLJ?lb=atOHATDg&utm_medium=Share&utm_source=shortUrl)
   [![Team Size](https://img.shields.io/badge/Team%20Size-3-green)]()
 </div>
 
 
 ## 🏆 Hackathon Submission
     
-#### This project was developed for the Techtronics 2025, Dnyanprassarak Mandal's College and Research Centre, Goa.
+#### This project was developed for the Technotronics 2025, Dnyanprassarak Mandal's College and Research Centre, Goa.
 
 
 
@@ -40,8 +40,8 @@
 ### Key Features Implemented
 1. **Waste Tracking** ✅
    - Tracks waste produced by a campus
-   - Tracks the amount of wate produced per student
-   - Campus leaderboard System
+   - Tracks the amount of waste produced per student
+   - Campus waste produced leaderboard system
 
 2. **Web applications** ✅
    - Clean, responsive UI
@@ -316,8 +316,7 @@ zip -r talent-platform.zip talent-platform/ \
    -x "talent-platform/*/.env"
 ```
 ## 🙏 Acknowledgments
-- JPD Hub for the opportunity
-- Advitiya IIT Ropar for hosting
+- Technotronics Team for the opportunity
 - All open-source libraries used in this project
 
 ## 📄 License
