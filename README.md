@@ -1,7 +1,7 @@
 # 🌍 Sustainable Solutions Platform - Technotronics Hackathon 2025
 
 <div align="center">
-  <img src="/talent-platform/talent-platform-frontend/public/talentModule-baner.png" alt="Talent Platform Banner" width="100%">
+  <img src="README_Banner.png"  alt="Elemental Coder Banner" width="100 >
   
   [![Made for Technotronics](https://img.shields.io/badge/Made%20for-Technotronics-blue)](https://unstop.com/o/a4ckfLJ?lb=atOHATDg&utm_medium=Share&utm_source=shortUrl)
   [![Team Size](https://img.shields.io/badge/Team%20Size-3-green)]()
