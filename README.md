@@ -67,21 +67,23 @@ graph TD
     A[Client] -->|HTTP| B[React Frontend]
     B -->|API Calls| C[Node.js Backend]
     C -->|Database Queries| D[MongoDB]
-    C -->|File Storage| E[Local Storage]
-    C -->|Notifications| F[WhatsApp API]
+    C -->|File Storage| E[AWS S3]
+    C -->|Notifications| F[Twilio API]
     
     subgraph Frontend
         B -->|React Components| B1[User Dashboard]
         B -->|React Components| B2[Admin Dashboard]
         B -->|React Components| B3[Marketplace]
         B -->|React Components| B4[Impact Tracker]
+        B -->|React Components| B5[Awareness Portal]
     end
     
     subgraph Backend Services
         C -->|Express Routes| C1[Usage Tracking]
         C -->|Express Routes| C2[Analytics]
         C -->|Express Routes| C3[Marketplace]
-        C -->|Middleware| C4[Authentication]
+        C -->|Express Routes| C4[User Management]
+        C -->|Middleware| C5[Authentication]
     end
 ```
 
@@ -93,14 +95,6 @@ graph TD
 
 <br>
 
-
-### 🔄 Component Relationships
-- Home Page → Registration/Directory
-- Directory → Individual Profiles
-- Admin Dashboard → Profile Management
-- Profile → Messaging System
-
-<br>
 <hr>
 
 ## 🛠️ Technology Stack
