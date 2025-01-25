@@ -1,4 +1,4 @@
-# 🎯 Awareness Grabbing Platform - Technotronics Hackathon 2025
+# 🌍 Sustainable Solutions Platform - Technotronics Hackathon 2025
 
 <div align="center">
   <img src="/talent-platform/talent-platform-frontend/public/talentModule-baner.png" alt="Talent Platform Banner" width="100%">
@@ -14,65 +14,53 @@
 
 
 
-
 ## 💡 Problem Statement
 
-<div style="display: flex; align-items: center; gap: 20px;">
-  <div>
-
-#### Tech-Driven Solutions to Address the Dual Threat of Paper Cups – Environmental Problems and Health Risks:
+#### Addressing Environmental and Health Risks of Paper Cups
 
 - Raises Awareness
 - Encourages Sustainable Behaviour
 - Tracks Impact
 - Facilitates Collaboration
-  </div>
-</div>
+
 
 
 ## 💡 Our Solution
-### Our solution is a Web platform that increases Awareness and encourages Sustainability while recommending environmentally friendlier options.
+
+### Our platform is a web-based application designed to raise awareness and promote sustainability by recommending environmentally friendly alternatives.
+
 
 <div align="center">
   <img src="public/solution-overview.png" alt="Solution Overview" width="80%">
 </div>
 
-### Key Features Implemented
-1. **Waste Tracking** ✅
-   - Tracks waste produced by a campus
-   - Tracks the amount of waste produced per student
-   - Campus waste produced leaderboard system
+### Key Features
 
-2. **Web applications** ✅
-   - Clean, responsive UI
-   - Advanced search and filters
-   - Accessible by anyone
+1. **Paper Cup Usage Tracking** ✅
+   - Tracks paper cup consumption across campus
+   - Monitors individual student usage patterns
+   - Campus sustainability leaderboard system
 
-3. **Replacment Marketplace** ✅
-   - Seamless browsing experience
-   - Companies can provide enviornmentally friendlier options
-   - Usefull for both Campuses and Students
+2. **Awareness Portal** ✅
+   - Educational resources about paper cup environmental impact
+   - Real-time campus sustainability metrics
+   - Interactive carbon footprint calculator
 
-4. **Community Dashboard** ✅
-   - can detail situtaions and hurdles faced for overcoming the problems
-   - a good way to help an up and coming solution
-   - Analytics and reporting
+3. **Eco-Alternative Marketplace** ✅
+   - Curated selection of reusable cup options
+   - Direct connections with eco-friendly vendors
+   - Bulk purchase options for institutions
 
-<!-- ## 🖥️ Demo & Screenshots
+4. **Impact Dashboard** ✅
+   - Visualizes environmental impact reduction
+   - Tracks money saved through sustainable alternatives
+   - Community success stories and best practices
+   - Progress tracking towards sustainability goals
 
-<div align="center">
-  <img src="public/screenshots/dashboard.png" alt="Dashboard" width="45%">
-  <img src="public/screenshots/profile.png" alt="Profile Page" width="45%">
-</div> -->
 
-<!-- ### 🔗 Live Demo
-- [Frontend Application](https://your-demo-link.com)
-- [Admin Dashboard](https://your-admin-demo.com)
-- [Demo Video](https://youtube.com/your-demo-video) -->
+## 🔄 Architecture
 
-## 📊 Architecture
-
-#### The Talent Platform uses a simple three-tier architecture with React frontend, Node.js backend, and MongoDB database.
+#### Our platform uses a simple three-tier architecture with React frontend, Node.js backend, and MongoDB database.
 
 ```mermaid
 graph TD
@@ -80,20 +68,28 @@ graph TD
     B -->|API Calls| C[Node.js Backend]
     C -->|Database Queries| D[MongoDB]
     C -->|File Storage| E[Local Storage]
-    C -->|Email Service| F[Nodemailer]
+    C -->|Notifications| F[WhatsApp API]
     
     subgraph Frontend
-        B -->|React Components| B1[Talent Registration]
+        B -->|React Components| B1[User Dashboard]
         B -->|React Components| B2[Admin Dashboard]
-        B -->|React Components| B3[Client Interface]
+        B -->|React Components| B3[Marketplace]
+        B -->|React Components| B4[Impact Tracker]
     end
     
     subgraph Backend Services
-        C -->|Express Routes| C1[Talent Routes]
-        C -->|Express Routes| C2[Admin Routes]
-        C -->|Middleware| C3[Authentication]
+        C -->|Express Routes| C1[Usage Tracking]
+        C -->|Express Routes| C2[Analytics]
+        C -->|Express Routes| C3[Marketplace]
+        C -->|Middleware| C4[Authentication]
     end
 ```
+
+### 🔄 Component Relationships
+- Home Page → Usage Dashboard/Marketplace
+- Dashboard → Impact Analytics
+- Marketplace → Product Listings
+- Admin Panel → Usage Statistics & Reports
 
 <br>
 
@@ -115,6 +111,7 @@ graph TD
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" alt="Node.js"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="40" alt="MongoDB"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" alt="Docker"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="40" alt="Tailwind CSS"/>
 </div>
 
 <br>
@@ -125,76 +122,16 @@ graph TD
 - **File Storage**: AWS S3
 - **Notifications**: Twilio WhatsApp API
 - **Styling**: Tailwind CSS
+- **Deployment**: Docker
 
-## 🚦 Getting Started
-
-### Prerequisites
-- Node.js (v18 or higher)
-- npm (v9 or higher)
-- MongoDB (v6 or higher)
-- MongoDB Compass (for database management)
-- Git vcs
-
-### Required Dependencies
-
-<details>
-  <summary>Check the list</summary>
-
-#### Frontend
-```bash
-# Core Dependencies
-npm create vite@latest talent-platform-frontend -- --template react-ts
-cd talent-platform-frontend
-npm install
-
-# Additional Dependencies
-npm install axios react-router-dom react-toastify
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-- React 18
-- TypeScript
-- Vite
-- Tailwind CSS
-- Axios
-- React Router DOM
-- React Toastify
-
-#### Backend
-```bash
-# Create and setup backend
-mkdir backend
-cd backend
-npm init -y
-npm install typescript ts-node @types/node -D
-npx tsc --init
-
-# Core Dependencies
-npm install express mongoose cors dotenv
-
-# Additional Dependencies
-npm install multer nodemailer
-npm install @types/express @types/cors @types/multer @types/nodemailer -D
-```
-
-- Express.js
-- MongoDB/Mongoose
-- TypeScript
-- Cors
-- Dotenv
-- Multer (for file uploads)
-- Nodemailer (for email notifications)
-
-</details>
 
 
 ## 🚀 Installation & Setup
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/talent-platform.git
-   cd talent-platform
+   git clone https://github.com/yourusername/sustainable-solutions-platform.git
+   cd sustainable-solutions-platform
    ```
 
 2. **Backend Setup:**
@@ -209,30 +146,30 @@ npm install @types/express @types/cors @types/multer @types/nodemailer -D
    cp .env.example .env
 
    # Update .env with your credentials
-   MONGODB_URI=mongodb://localhost:27017/talent-platform
+   MONGODB_URI=mongodb://localhost:27017/sustainable-solutions
    PORT=8080
 
    # Start the backend server
    npm run dev
-
+   ```
 
 3. **Frontend Setup:**
    ```bash
    # Open a new terminal
-   cd talent-platform-frontend
+   cd frontend
 
    # Install dependencies
    npm install
 
    # Start the frontend development server
    npm run dev
+   ```
 
 4. **Database Setup:**
    - Open MongoDB Compass
    - Connect to: `mongodb://localhost:27017`
-   - Create a new database named `talent-platform`
-   - Create collections: `talents`, `users`, `requests`
-
+   - Create a new database named `sustainable-solutions`
+   - Create collections: `cup_usage`, `users`, `vendors`
 
 5. **Verify Setup:**
    - Backend should be running on: `http://localhost:8080`
@@ -241,60 +178,37 @@ npm install @types/express @types/cors @types/multer @types/nodemailer -D
    - MongoDB Compass should show your database
 
    
-### Running the Project
-
-<details>
-  <summary>Expand to View</summary>
-
-1. **Start MongoDB:**
-   - Ensure MongoDB service is running
-   - Keep MongoDB Compass open for database monitoring
-
-2. **Start Backend Server:**
-   ```bash
-   cd backend
-   npm run dev
-   ```
-
-3. **Start Frontend Development Server:**
-   ```bash
-   cd talent-platform-frontend
-   npm run dev
-   ```
-
-4. **Access the Application:**
-   - Frontend: `http://localhost:5173`
-   - Backend API: `http://localhost:8080`
-   - Admin Dashboard: `http://localhost:5173/admin`
 
 ### Troubleshooting
-- If MongoDB fails to connect, ensure the MongoDB service is running
-- If ports are occupied, update PORT in backend `.env`
-- For frontend build issues, try clearing npm cache:
+- If MongoDB fails to connect, ensure the MongoDB service is running.
+- If ports are occupied, update the `PORT` in the backend `.env` file.
+- For frontend build issues, try clearing the npm cache:
   ```bash
   npm cache clean --force
-
-</details>
+  ```
+- If the backend server does not start, check for any errors in the console and ensure all dependencies are installed correctly.
+- If the frontend does not load, verify that the backend is running and accessible at `http://localhost:8080`.
+- For issues with WhatsApp notifications, ensure that the Twilio API credentials are correctly set in the `.env` file.
 
 ## 📱 Features & Screenshots
 
 <div align="center">
-  <img src="public/screenshots/registration.png" alt="Registration Form" width="45%">
-  <img src="public/screenshots/admin-dashboard.png" alt="Admin Dashboard" width="45%">
+  <img src="public/screenshots/usage-tracking.png" alt="Usage Tracking" width="45%">
+  <img src="public/screenshots/impact-dashboard.png" alt="Impact Dashboard" width="45%">
 </div>
 
 ### Feature Highlights
-- **Smart Form Validation**: Real-time validation with helpful error messages
-- **Responsive Design**: Works seamlessly on all devices
-- **Secure File Upload**: Support for profile photo upload with preview
-- **Admin Controls**: Comprehensive dashboard for profile management
+- **Paper Cup Usage Tracking**: Monitors individual and campus-wide paper cup consumption.
+- **Awareness Portal**: Provides educational resources on the environmental impact of paper cups.
+- **Eco-Alternative Marketplace**: Offers a curated selection of reusable cup options and eco-friendly vendors.
+- **Impact Dashboard**: Visualizes environmental impact reduction and tracks savings from sustainable alternatives.
 
 ## 🎯 Future Scope
-- [ ] AI-powered solutions
-- [ ] Video interview integration
-- [ ] Blockchain-based skill verification
-- [ ] Mobile application
-- [ ] Advanced analytics dashboard
+- [ ] AI-powered recommendations for sustainable products
+- [ ] Integration of a mobile application for on-the-go tracking
+- [ ] Advanced analytics dashboard for deeper insights into usage patterns
+- [ ] Community engagement features for sharing success stories
+- [ ] Gamification elements to encourage sustainable behavior among users
 
 <hr>
 
@@ -306,21 +220,14 @@ npm install @types/express @types/cors @types/multer @types/nodemailer -D
 |3.| Tushar |[@codingnoobno1](https://github.com/codingnoobno1)|
 <br>
 
-# Create a zip file
 
-```bash
-zip -r talent-platform.zip talent-platform/ \
-   -x "talent-platform/node_modules/*" \
-   -x "talent-platform/*/node_modules/*" \
-   -x "talent-platform/.git/*" \
-   -x "talent-platform/*/.env"
-```
 ## 🙏 Acknowledgments
 - Technotronics Team for the opportunity
 - All open-source libraries used in this project
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+####  This project is licensed under the MIT License - see the LICENSE.md file for details.
+
 
 
