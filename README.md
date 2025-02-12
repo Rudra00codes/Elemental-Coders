@@ -1,227 +1,272 @@
-# 🌍 Sustainable Solutions Platform - Technotronics Hackathon 2025
+# 🌍 EcoCup - Sustainable Solutions Platform - Technotronics Hackathon 2025
  
 <div align="center">
   <img src="./public/README_Banner.png" alt="Elemental Coder Banner" width="100%"> 
+  <img src="./public/logo.svg" alt="EcoCup Logo" width="80"> 
   
   [![Made for Technotronics](https://img.shields.io/badge/Made%20for-Technotronics-blue)](https://unstop.com/o/a4ckfLJ?lb=atOHATDg&utm_medium=Share&utm_source=shortUrl)
   [![Team Size](https://img.shields.io/badge/Team%20Size-3-green)]()
+  [![Built with Next.js](https://img.shields.io/badge/Built%20with-Next.js-black)](https://nextjs.org)
+  [![Styled with Tailwind](https://img.shields.io/badge/Styled%20with-Tailwind-06B6D4)](https://tailwindcss.com)
 </div>
 
-
-## 🏆 Hackathon Submission
-    
-#### This project was developed for the Technotronics 2025, Dnyanprassarak Mandal's College and Research Centre, Goa.
-
-
+## 🏆 Hackathon Project
+This project was developed for Technotronics 2025, addressing the critical environmental and health challenges posed by disposable paper cups.
 
 ## 💡 Problem Statement
+Disposable paper cups pose a dual threat:
+1. **Environmental Impact**: Contributing to microplastic pollution and waste
+2. **Health Risks**: Containing harmful chemicals like BPA that can leach into beverages
 
-#### Addressing Environmental and Health Risks of Paper Cups
-
-- Raises Awareness
-- Encourages Sustainable Behaviour
-- Tracks Impact
-- Facilitates Collaboration
-
-
-
-## 💡 Our Solution
-
-### Our platform is a web-based application designed to raise awareness and promote sustainability by recommending environmentally friendly alternatives.
-
-
-<div align="center">
-  <img src="public/solution-overview.png" alt="Solution Overview" width="80%">
-</div>
+## 🎯 Our Solution
+EcoCup is a comprehensive web platform that combines education, tracking, and community engagement to promote sustainable alternatives to paper cups.
 
 ### Key Features
 
-1. **Paper Cup Usage Tracking** ✅
-   - Tracks paper cup consumption across campus
-   - Monitors individual student usage patterns
-   - Campus sustainability leaderboard system
+#### 1. Learn 📚
+- Detailed information about environmental impacts
+- Health risk awareness
+- Interactive educational content
+- Real-world statistics and data
 
-2. **Awareness Portal** ✅
-   - Educational resources about paper cup environmental impact
-   - Real-time campus sustainability metrics
-   - Interactive carbon footprint calculator
+#### 2. Track & Rewards 🏆
+- Personal usage dashboard
+- Impact visualization
+- Achievement system
+- Campus-wide leaderboard
+- Reward redemption system
 
-3. **Eco-Alternative Marketplace** ✅
-   - Curated selection of reusable cup options
-   - Direct connections with eco-friendly vendors
-   - Bulk purchase options for institutions
+#### 3. Solutions 🌱
+- Eco-friendly product recommendations
+- Campus initiatives
+- Sustainable practices guide
+- Refill station locations
 
-4. **Impact Dashboard** ✅
-   - Visualizes environmental impact reduction
-   - Tracks money saved through sustainable alternatives
-   - Community success stories and best practices
-   - Progress tracking towards sustainability goals
+#### 4. Community 👥
+- Success stories
+- Group discussions
+- Event organization
+- Collaborative initiatives
 
+## 🏗️ Project Structure
 
-## 🔄 Architecture
+```
+src/
+├── app/                    # Next.js app directory
+│   ├── learn/             # Educational content
+│   ├── track/             # Impact tracking & rewards
+│   ├── solutions/         # Sustainable alternatives
+│   ├── community/         # Community features
+│   └── page.js            # Home page
+├── components/
+│   ├── common/           # Reusable UI components
+│   ├── features/         # Feature-specific components
+│   │   ├── learn/
+│   │   ├── track/
+│   │   ├── solutions/
+│   │   └── community/
+│   └── layout/           # Layout components
+├── lib/                  # Shared utilities
+│   ├── utils/
+│   ├── hooks/
+│   └── api/
+└── styles/              # Global styles
+```
 
-#### Our platform uses a simple three-tier architecture with React frontend, Node.js backend, and MongoDB database.
+## 🏗️ Architecture
+
+Our application follows a modern Next.js 14 architecture with server and client components, leveraging the App Router for improved performance and SEO.
 
 ```mermaid
 graph TD
-    A[Client] -->|HTTP| B[React Frontend]
-    B -->|API Calls| C[Node.js Backend]
-    C -->|Database Queries| D[MongoDB]
-    C -->|File Storage| E[AWS S3]
-    C -->|Notifications| F[Twilio API]
-    
-    subgraph Frontend
-        B -->|React Components| B1[User Dashboard]
-        B -->|React Components| B2[Admin Dashboard]
-        B -->|React Components| B3[Marketplace]
-        B -->|React Components| B4[Impact Tracker]
-        B -->|React Components| B5[Awareness Portal]
+    subgraph "Client Layer"
+        A[Browser] --> B[Next.js App]
+        B --> C1[Client Components]
+        B --> C2[Server Components]
     end
-    
-    subgraph Backend Services
-        C -->|Express Routes| C1[Usage Tracking]
-        C -->|Express Routes| C2[Analytics]
-        C -->|Express Routes| C3[Marketplace]
-        C -->|Express Routes| C4[User Management]
-        C -->|Middleware| C5[Authentication]
+
+    subgraph "Feature Modules"
+        D1[Learn Module]
+        D2[Track Module]
+        D3[Solutions Module]
+        D4[Community Module]
+        
+        C1 --> D1
+        C1 --> D2
+        C1 --> D3
+        C1 --> D4
+        
+        C2 --> D1
+        C2 --> D2
+        C2 --> D3
+        C2 --> D4
     end
+
+    subgraph "Core Services"
+        E1[Authentication]
+        E2[State Management]
+        E3[API Routes]
+        E4[Database Service]
+        
+        D1 --> E1
+        D2 --> E1
+        D3 --> E1
+        D4 --> E1
+        
+        D1 --> E2
+        D2 --> E2
+        D3 --> E2
+        D4 --> E2
+        
+        E2 --> E3
+        E3 --> E4
+    end
+
+    subgraph "External Services"
+        F1[MongoDB Atlas]
+        F2[NextAuth.js]
+        F3[Vercel Edge]
+        
+        E4 --> F1
+        E1 --> F2
+        B --> F3
+    end
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style F1 fill:#bfb,stroke:#333,stroke-width:2px
+    style F2 fill:#bfb,stroke:#333,stroke-width:2px
+    style F3 fill:#bfb,stroke:#333,stroke-width:2px
 ```
 
-### 🔄 Component Relationships
-- Home Page → Usage Dashboard/Marketplace
-- Dashboard → Impact Analytics
-- Marketplace → Product Listings
-- Admin Panel → Usage Statistics & Reports
+### Architecture Components
 
-<br>
+#### 1. Client Layer
+- **Browser**: Entry point for user interactions
+- **Next.js App**: Core application framework
+- **Client Components**: Interactive UI elements
+- **Server Components**: Static and dynamic server-rendered content
 
-<hr>
+#### 2. Feature Modules
+- **Learn Module**: Educational content and resources
+- **Track Module**: Usage tracking and rewards system
+- **Solutions Module**: Sustainable alternatives showcase
+- **Community Module**: User interaction and collaboration
+
+#### 3. Core Services
+- **Authentication**: User identity management
+- **State Management**: Client-side data handling
+- **API Routes**: Server-side endpoints
+- **Database Service**: Data persistence layer
+
+#### 4. External Services
+- **MongoDB Atlas**: Cloud database
+- **NextAuth.js**: Authentication provider
+- **Vercel Edge**: Hosting and deployment
+
+### Key Design Principles
+
+1. **Server-First Approach**
+   - Leverage Server Components for better performance
+   - Reduce client-side JavaScript
+   - Improve SEO through server-side rendering
+
+2. **Modular Architecture**
+   - Feature-based organization
+   - Reusable components
+   - Clear separation of concerns
+
+3. **Performance Optimization**
+   - Edge caching
+   - Image optimization
+   - Route prefetching
+
+4. **Security**
+   - Authentication middleware
+   - API route protection
+   - Environment variable security
 
 ## 🛠️ Technology Stack
 
-<div class="tech-grid" style="display: flex; gap: 20px;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" alt="React"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" alt="TypeScript"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" alt="Node.js"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="40" alt="MongoDB"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" alt="Docker"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="40" alt="Tailwind CSS"/>
-</div>
-
-<br>
-
-- **Frontend**: React.js with TypeScript
-- **Backend**: Node.js
-- **Database**: MongoDB
-- **File Storage**: AWS S3
-- **Notifications**: Twilio WhatsApp API
+- **Framework**: Next.js 14
 - **Styling**: Tailwind CSS
-- **Deployment**: Docker
+- **State Management**: React Hooks
+- **Database**: MongoDB (planned)
+- **Authentication**: NextAuth.js (planned)
+- **Deployment**: Vercel (planned)
 
-
-
-## 🚀 Installation & Setup
+## 🚀 Getting Started
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/sustainable-solutions-platform.git
-   cd sustainable-solutions-platform
+   git clone https://github.com/Rudra00codes/Elemental-Coders.git
+   cd Elemental-Coders
    ```
 
-2. **Backend Setup:**
+2. **Install dependencies:**
    ```bash
-   # Navigate to backend directory
-   cd backend
-
-   # Install dependencies
    npm install
-
-   # Create .env file
-   cp .env.example .env
-
-   # Update .env with your credentials
-   MONGODB_URI=mongodb://localhost:27017/sustainable-solutions
-   PORT=8080
-
-   # Start the backend server
-   npm run dev
+   # or
+   yarn install
    ```
 
-3. **Frontend Setup:**
+3. **Run the development server:**
    ```bash
-   # Open a new terminal
-   cd frontend
-
-   # Install dependencies
-   npm install
-
-   # Start the frontend development server
    npm run dev
+   # or
+   yarn dev
    ```
 
-4. **Database Setup:**
-   - Open MongoDB Compass
-   - Connect to: `mongodb://localhost:27017`
-   - Create a new database named `sustainable-solutions`
-   - Create collections: `cup_usage`, `users`, `vendors`
+4. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-5. **Verify Setup:**
-   - Backend should be running on: `http://localhost:8080`
-   - Frontend should be running on: `http://localhost:5173`
-   - MongoDB should be connected (check backend console)
-   - MongoDB Compass should show your database
+## 📱 Features Preview
 
-   
+### Learn Page
+- Environmental impact education
+- Health risk awareness
+- Interactive statistics
+- Call to action for sustainable choices
 
-### Troubleshooting
-- If MongoDB fails to connect, ensure the MongoDB service is running.
-- If ports are occupied, update the `PORT` in the backend `.env` file.
-- For frontend build issues, try clearing the npm cache:
-  ```bash
-  npm cache clean --force
-  ```
-- If the backend server does not start, check for any errors in the console and ensure all dependencies are installed correctly.
-- If the frontend does not load, verify that the backend is running and accessible at `http://localhost:8080`.
-- For issues with WhatsApp notifications, ensure that the Twilio API credentials are correctly set in the `.env` file.
+### Track & Rewards Page
+- Personal impact dashboard
+- Points system
+- Reward redemption
+- Campus leaderboard
 
-## 📱 Features & Screenshots
+### Solutions Page
+- Sustainable product recommendations
+- Campus initiatives
+- Refill station locations
+- Best practices guide
 
-<div align="center">
-  <img src="public/screenshots/usage-tracking.png" alt="Usage Tracking" width="45%">
-  <img src="public/screenshots/impact-dashboard.png" alt="Impact Dashboard" width="45%">
-</div>
+### Community Page
+- Discussion forums
+- Event organization
+- Success stories
+- Collaborative initiatives
 
-### Feature Highlights
-- **Paper Cup Usage Tracking**: Monitors individual and campus-wide paper cup consumption.
-- **Awareness Portal**: Provides educational resources on the environmental impact of paper cups.
-- **Eco-Alternative Marketplace**: Offers a curated selection of reusable cup options and eco-friendly vendors.
-- **Impact Dashboard**: Visualizes environmental impact reduction and tracks savings from sustainable alternatives.
+## 🎯 Future Enhancements
 
-## 🎯 Future Scope
-- [ ] AI-powered recommendations for sustainable products
-- [ ] Integration of a mobile application for on-the-go tracking
-- [ ] Advanced analytics dashboard for deeper insights into usage patterns
-- [ ] Community engagement features for sharing success stories
-- [ ] Gamification elements to encourage sustainable behavior among users
+- [ ] User Authentication System
+- [ ] MongoDB Integration for Data Persistence
+- [ ] Real-time Usage Tracking
+- [ ] QR Code Integration for Cup Usage
+- [ ] Mobile App Development
+- [ ] Integration with Campus Payment Systems
+- [ ] AI-powered Usage Predictions
+- [ ] Automated Impact Reports
 
-<hr>
+## 👥 Contributing
 
-## Team Details
-|Sr no.| Name | GitHub |
-|------|------|--------|
-|1.| Rudra Pratap Singh | [@Rudra00codes](https://github.com/Rudra00codes) |
-|2.| Anant Srivastava | [@RoboShep](https://github.com/Robo-Shep)|
-|3.| Tushar |[@codingnoobno1](https://github.com/codingnoobno1)|
-<br>
-
-
-## 🙏 Acknowledgments
-- Technotronics Team for the opportunity
-- All open-source libraries used in this project
+We welcome contributions! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
-####  This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 🙏 Acknowledgments
 
-
+- Dnyanprassarak Mandal's College and Research Centre, Goa
+- Technotronics 2025 Organizing Team
+- All contributors and supporters
