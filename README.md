@@ -139,6 +139,8 @@ graph TD
     style F3 fill:#bfb,stroke:#333,stroke-width:2px
 ```
 
+<details><summary>Architecture Components</summary>
+
 ### Architecture Components
 
 #### 1. Client Layer
@@ -185,6 +187,8 @@ graph TD
    - Authentication middleware
    - API route protection
    - Environment variable security
+   
+</details>
 
 ## 🛠️ Technology Stack
 
